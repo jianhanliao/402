@@ -1,12 +1,210 @@
 <!DOCTYPE html>
 <html lang="zh-Hant">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的照片</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>我的資料分析作品集</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", "Noto Sans TC", sans-serif;
+      background-color: #0b0c10;
+      color: #ffffff;
+      line-height: 1.6;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 60px;
+      background-color: rgba(0, 0, 0, 0.7);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-size: 24px;
+      color: #ff4f4f;
+    }
+
+    header nav a {
+      color: #ffffff;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    header nav a:hover {
+      color: #ff4f4f;
+    }
+
+    .hero {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      height: 90vh;
+      background: linear-gradient(to bottom right, rgba(0,0,0,0.8), rgba(10,10,30,0.9)),
+                  url('background.jpg') center/cover no-repeat;
+      padding: 0 20px;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      color: #cccccc;
+    }
+
+    .hero a {
+      background-color: #ff4f4f;
+      color: #fff;
+      padding: 12px 30px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+
+    .hero a:hover {
+      background-color: #ff7070;
+    }
+
+    .about {
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .about img {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #ff4f4f;
+      margin-bottom: 20px;
+    }
+
+    .about h3 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .about p {
+      color: #cccccc;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .works {
+      padding: 80px 20px;
+      background-color: #0e1015;
+      text-align: center;
+    }
+
+    .works h3 {
+      font-size: 2rem;
+      margin-bottom: 50px;
+    }
+
+    .work-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .work-item {
+      background-color: #1b1d24;
+      border-radius: 10px;
+      overflow: hidden;
+      width: 300px;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .work-item:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+    }
+
+    .work-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .work-item h4 {
+      margin: 15px 0 5px;
+      color: #ff4f4f;
+    }
+
+    .work-item p {
+      font-size: 0.95rem;
+      color: #bbbbbb;
+      padding: 0 15px 20px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      background-color: #0b0c10;
+      color: #777;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 <body>
-    <h1>這是我的照片</h1>
-    <img src="your-photo.jpg" alt="我的照片">
+  <header>
+    <h1>DataVision</h1>
+    <nav>
+      <a href="#about">關於我</a>
+      <a href="#works">作品</a>
+      <a href="#contact">聯絡</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>The New Standard in Data Analysis</h2>
+    <p>用數據獲得 360 度的商業洞察</p>
+    <a href="#works">了解更多</a>
+  </section>
+
+  <section id="about" class="about">
+    <img src="myphoto.jpg" alt="我的照片">
+    <h3>關於我</h3>
+    <p>您好！我是資料分析師，專注於數據視覺化與商業智能。透過數據驅動的洞察，幫助企業制定更明智的決策。</p>
+  </section>
+
+  <section id="works" class="works">
+    <h3>我的作品</h3>
+    <div class="work-list">
+      <div class="work-item">
+        <img src="work1.已壓縮.pdf" alt="作品1">
+        <h4>銷售資料儀表板</h4>
+        <p>使用 Power BI 建立互動式儀表板，分析銷售趨勢與顧客行為。</p>
+      </div>
+      <div class="work-item">
+        <img src="work2.jpg" alt="作品2">
+        <h4>客戶流失預測模型</h4>
+        <p>應用機器學習模型預測客戶流失率，協助行銷團隊優化策略。</p>
+      </div>
+      <div class="work-item">
+        <img src="work3.jpg" alt="作品3">
+        <h4>市場分析報告</h4>
+        <p>結合多來源數據，進行競爭分析與市場趨勢預測。</p>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <p>© 2025 DataVision | 聯絡信箱：youremail@example.com</p>
+  </footer>
 </body>
 </html>
